@@ -23,21 +23,30 @@
                     <a href="#">{{ cat }}</a>
                     {% endfor %}
                   </div>
-                  <div>
-                    <a href="{% url 'post-update' pk=post.pk %}" style="color: red"><strong>Update</strong></a>
-                    <a href="{% url 'post-delete' pk=post.pk %}" style="color: red"><strong>Delete</strong></a>
-                  </div>
+
                 </div>
                 <h1>{{ post.title }}<a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
                 <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="#" class="author d-flex align-items-center flex-wrap">
                     <div class="avatar"><img src="{{ post.author.profile_picture.url }}" alt="..." class="img-fluid"></div>
                     <div class="title"><span>{{ post.author.user.username }}</span></div></a>
                   <div class="d-flex align-items-center flex-wrap">       
-                    <div class="date"><i class="icon-clock"></i> {{ post.timestamp|timesince }} ago</div>
-                    <div class="views"><i class="icon-eye"></i> {{ post.view_count }}</div>
-                    <div class="comments meta-last"><i class="icon-comment"></i>{{ post.comment_count }}</div>
+                    <div class="date"><i class=""></i> {{ post.timestamp|timesince }} ago</div>
+                    <div class="views"><i class=""></i>views: {{ post.view_count }}</div>
+                    <div class="comments meta-last"><i class=""></i>comments: {{ post.comment_count }}</div><br>
+
+
+                    <!--                  Facebook like plugin-->
+                   <br> <div class="fb-like" data-href="http://127.0.0.1:8000/blog/" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+
                   </div>
                 </div>
+                <br><br>
+
+                <div>
+                  <button type="button" class="btn btn-warning"><a href="{% url 'post-update' pk=post.pk %}" style="color: black"><strong>Update</strong></a></button>
+                  <button type="button" class="btn btn-danger"><a href="{% url 'post-delete' pk=post.pk %}" style="color: white"><strong>Delete</strong></a></button>
+                </div>
+
                 <div class="post-body">
                   {{ post.content | safe }}
                 </div>

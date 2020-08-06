@@ -40,13 +40,13 @@
           {% if user.is_authenticated %}
           <li class="nav-item"><a href="" class="nav-link" style="color:red"><strong>Hello, {{user.first_name}}  {{user.last_name}}</strong> </a></li>
 
-          <div align="center"><a href="logout"><button type="button" class="btn btn-success">logout</button></a></div>
+          <div align="center"><a href="/blog/logout"><button type="button" class="btn btn-success">logout</button></a></div>
           {% else %}
           <div align="center"><a href="/blog/register"><button type="button" class="btn btn-success">Signup</button></a>
           <a href="/blog/login"><button type="button" class="btn btn-success">login</button></a></div>
           {% endif %}
 
-          
+
 
         </ul>
         {% comment %} <ul class="langs navbar-text"><a href="#" class="active">EN</a><span>           </span><a href="#">ES</a></ul> {% endcomment %}

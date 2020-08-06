@@ -7,7 +7,7 @@
     <form action="{% url 'search' %}" class="search-form">
         <div class="form-group">
         <input type="text" name="q" placeholder="What are you looking for?">
-        <button type="submit" class="submit"><i class="icon-search"></i></button>
+        <button type="submit" class="submit"><i class=""></i></button>
         </div>
     </form>
     </div>
@@ -23,8 +23,8 @@
             <div class="image"><img src="{{ post.thumbnail.url }}" alt="..." class="img-fluid"></div>
             <div class="title"><strong>{{ post.title }}</strong>
                 <div class="d-flex align-items-center">
-                <div class="views"><i class="icon-eye"></i> {{ post.view_count }}</div>
-                <div class="comments"><i class="icon-comment"></i>{{ post.comment_count }}</div>
+                <div class="views"><i class=""></i>view: {{ post.view_count }}</div>
+                <div class="comments"><i class=""></i>comments:{{ post.comment_count }}</div>
                 </div>
             </div>
             </div>

@@ -25,6 +25,7 @@
                   </div><a href="{{ post.get_absolute_url }}">
                     <h3 class="h4">{{ post.title }}</h3></a>
                   <p class="text-muted">{{ post.overview }}</p>
+                  <div class="post col-xl-6">
                   <a style="color: blue" href="{{ post.get_absolute_url }}">click here to open this article</a><br><br>
                   <footer class="post-footer d-flex align-items-center">
                     <a href="#" class="author d-flex align-items-center flex-wrap">
@@ -35,6 +36,7 @@
                     <div class="comments meta-last"><i class=""></i>comments: {{ post.comment_count }}</div>
                   </footer>
                 </div>
+              </div>
               {% endfor %}
             </div>
             <!-- Pagination -->
